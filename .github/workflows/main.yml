@@ -17,7 +17,7 @@ jobs:
           remove-dotnet: 'true'
           remove-android: 'true'
 
-      - name: Kich hoat PhanTOS Marble
+      - name: Kich hoat PhanTomOS Marble
         run: |
           echo "💀 Dang nap linh hon Dau Lau vao he thong..."
           echo "⏰ Kich hoat Dong ho Pixel Custom cho Marble..."
