@@ -5,24 +5,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout PhanTomOS Source
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Build Environment
+      - name: Kiem tra dung luong o cung
         run: |
-          sudo apt update && sudo apt install -y bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+          echo "📊 Dang kiem tra xem may chu co du cho de 'nau' ROM khong..."
+          df -h
+          echo "🚀 Neu o cung duoi 100GB, chung ta se dung 'meo' xoa file rac."
 
-      - name: Sync Source & Overlay
+      - name: Chuan bi moi truong (Fix loi)
         run: |
-          echo "🚀 Đang kéo mã nguồn Evolution X (Android 14)..."
-          # Lệnh này giả lập việc trộn code 'đầu lâu' của bạn vào ROM gốc
-          echo "🛠️ Đang đưa vân tay, đồng hồ và hình nền của Duc Luong vào hệ thống..."
-          sleep 5
-          echo "✅ Đã chuẩn bị xong linh hồn PhanTOS!"
-
-      - name: Cooking ROM (Build)
-        run: |
-          echo "🔥 Đang nấu ROM... (Quá trình này mất khoảng 3-6 tiếng trên máy chủ thật)"
-          echo "📦 Đang nén file: PhanTOS-v1.0-marble-SkullEdition.zip"
-          sleep 10
-          echo "✅ HOÀN TẤT! ROM ĐÃ SẴN SÀNG."
+          sudo apt update
+          # Them -y de may tu dong dong y moi thu
+          sudo apt install -y bc bison build-essential curl git zip
+          echo "✅ Da cai xong cong cu co ban!"
