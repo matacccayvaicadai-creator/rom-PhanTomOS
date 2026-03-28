@@ -340,4 +340,6 @@
     <bool name="config_enableLockScreenCustomClocks">true</bool>
     <bool name="config_defaultNightMode">true</bool>
     <string name="config_monet_palette" translatable="false">monochromatic</string>
+     <bool name="config_customBootAnimation">true</bool>
+    <string name="config_bootAnimationPath" translatable="false">/product/media/bootanimation.zip</string>
 </resources>
