@@ -338,4 +338,6 @@
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
 <string name="config_udfps_icon" translatable="false">ic_fingerprint_skull</string>
     <bool name="config_enableLockScreenCustomClocks">true</bool>
+    <bool name="config_defaultNightMode">true</bool>
+    <string name="config_monet_palette" translatable="false">monochromatic</string>
 </resources>
