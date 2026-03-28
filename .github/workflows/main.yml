@@ -1,4 +1,4 @@
-name: Build PhanTomOSomOS
+name: Build PhanTomOS
 on: workflow_dispatch
 
 jobs:
