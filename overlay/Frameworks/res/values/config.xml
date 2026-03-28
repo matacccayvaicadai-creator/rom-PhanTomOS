@@ -337,3 +337,5 @@
     <!--Useful if you want to improve signal reception -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
 <string name="config_udfps_icon" translatable="false">ic_fingerprint_skull</string>
+    <bool name="config_enableLockScreenCustomClocks">true</bool>
+</resources>
