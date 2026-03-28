@@ -1,7 +1,22 @@
-- name: Giai phong bo nho (Dọn dẹp ổ cứng)
+name: Build PhanTOS Final (Poco F5)
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Kiem tra dung luong o cung
         run: |
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf /usr/local/lib/android
-          sudo rm -rf /opt/ghc
-          echo "🚀 Đã dọn dẹp xong! Hiện tại đang có:"
+          echo "📊 Dang kiem tra xem may chu co du cho de 'nau' ROM khong..."
           df -h
+          echo "🚀 Neu o cung duoi 100GB, chung ta se dung 'meo' xoa file rac."
+
+      - name: Chuan bi moi truong (Fix loi)
+        run: |
+          sudo apt update
+          # Them -y de may tu dong dong y moi thu
+          sudo apt install -y bc bison build-essential curl git zip
+          echo "✅ Da cai xong cong cu co ban!"
