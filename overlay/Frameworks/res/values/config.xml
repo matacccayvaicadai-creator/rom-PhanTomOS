@@ -336,4 +336,4 @@
 
     <!--Useful if you want to improve signal reception -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
-</resources>
+<string name="config_udfps_icon" translatable="false">ic_fingerprint_skull</string>
